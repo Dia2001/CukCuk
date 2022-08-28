@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/img/cukcuk-logo.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>CUKCUK</title>
+    <!-- https://fontawesome.com/icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+
+         <!-- header bar -->
+
+        <div class="header">
+          <div class="header-left">
+            <div class="menu-btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="select-restaurant" style="width:200px;">
+              <select  class="custom-select-restaurant">
+                <option value="0">Nhà hàng biển đông</option>
+                <option value="1">Nhà hàng hoàng hảo</option>
+                <option value="2">Nhà hàng nhật bản</option>
+              </select>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="account-menu">
+              <img src="./assets/icon/avatar-default.png" alt="account"/>
+              <a href="#">Nguyễn Văn Dìa</a>
+              <img src="./assets/icon/option.png" alt="account">
+            </div>
+          </div>
+        </div>
+
+        <!-- menu bar -->
+
+        <div class="menu-bar">
+          <div>
+            <div class="menu-bar-top">
+              <div class="logo">
+                <img src="./assets/img/toggle.png"/>
+              </div>
+              <div class="title">
+                <img src="./assets/img/cukcuk-logo.png"/>
+              </div>
+            </div>
+            <div class="menu-bar-list">
+              <div class="menu-bar-item">
+                <div class="logo">
+                  <img src="./assets/icon/dashboard.png"/>
+                </div>
+                <div class="title">
+                  <a>Tổng quan</a>
+                </div>
+              </div>
+              <div class="menu-bar-item">
+                <div class="logo">
+                  <img src="./assets/icon/report.png"/>
+                </div>
+                <div class="title">
+                  <a>Báo cáo</a>
+                </div>
+                </div>
+                <div class="menu-bar-item">
+                  <div class="logo">
+                    <img src="./assets/icon/dashboard.png"/>
+                  </div>
+                  <div class="title">
+                    <a>Mua hàng</a>
+                  </div>
+                </div>
+                <div class="menu-bar-item">
+                  <div class="logo">
+                    <img src="./assets/icon/dic-employee.png"/>
+                  </div>
+                  <div class="title">
+                    <a onclick="openListEmployee()">Danh mục nhân viên</a>
+                  </div>
+                </div>
+                <div class="menu-bar-item">
+                  <div class="logo">
+                    <img src="./assets/icon/dic-employee.png"/>
+                  </div>
+                  <div class="title">
+                    <a onclick="openListEmployee()">Danh mục nhân viên</a>
+                  </div>
+                </div>
+                <div class="menu-bar-item">
+                  <div class="logo">
+                    <img src="./assets/icon/setting.png"/>
+                  </div>
+                  <div class="title">
+                    <a>Thiết lập hệ thống</a>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+   
+        <!-- container  -->
+
+        <div id="contentPageCurrent" class="container">
+          <object type="text/html" data="./pages/list-employee.html" width=100% height=100%></object>
+        </div>
+
+
+
+      </div>
+
+
+</body>
+<script src="./js/main.js"></script>
+</html>

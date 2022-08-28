@@ -1,0 +1,48 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #000;
+  --text-color-secondary: #333;
+  --bg-color: #ffffff;
+  --bg-color-secondary: #f9fafb;
+  --border-color: #efefef;
+  --bg-button:#019160;
+  --color-text-button:#ffffff;
+  --text-color:#333333;
+  --error-color: #c40606; 
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: MISA Fonts;
+}
+
+.dark-mode {
+  --text-color: #fff;
+  --text-color-secondary: #ccc;
+  --bg-color: #18191a;
+  --bg-color-secondary: #242526;
+  --border-color: #ccc;
+}
+@font-face{
+    font-family: MISA Fonts;
+    src: url(/assets/font/GoogleSans-Regular.otf)    
+}
+@font-face{
+    font-family: MISA Fonts Bold;
+    src: url(/assets/font/GoogleSans-Bold.otf)    
+}
+
+@font-face{
+    font-family: MISA Fonts Ỉtalic;
+    src: url(/assets/font/GoogleSans-Italic.otf)    
+}
