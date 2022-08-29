@@ -3,4 +3,4 @@
 
 2/ Validation forms: JS
 
-3/ Call API get data, add data, update data, delete data: Jquery
+3/ Call API get data and paging, add data, update data, delete data: Jquery
