@@ -12,7 +12,7 @@
 
         <div class="header">
           <p>Danh sách nhân viên</p>
-          <button class="m-button m-button-icon">Thêm nhân viên</button>
+          <button id="btnAdd" class="m-button m-button-icon">Thêm nhân viên</button>
         </div>
 
         <!-- fitter -->
@@ -39,6 +39,7 @@
               </div>
            </div>
            <div class="reload">
+            <button id="btnDelete"></button>
                <button class="button-reload"></button>
            </div>
         </div>
@@ -46,237 +47,41 @@
         <!-- table container -->
 
         <div class="container">
-            <table class="customers-table">
+            <table id="tbEmployeeList" class="customers-table">
+             <thead>
                 <tr>
-                    <th>Mã nhân viên</th>
-                    <th>Họ tên</th>
-                    <th>Giới tính</th>
-                    <th>Ngày sinh</th>
-                    <th>Điện thoại</th>
-                    <th>Email</th>
-                    <th>Chức vụ</th>
-                    <th>Phòng ban</th>
-                    <th>Mức lương cơ bản</th>
-                    <th>Tình trạng công việc</th>
+                    <th propValue="Sort" class="text-align--left" title="Số thứ tự" style="width:50px">STT</th>
+                    <th propValue="EmployeeCode" class="text-align--left" style="width:100px">Mã nhân viên</th>
+                    <th propValue="FullName" class="text-align--left">Họ và tên</th>
+                    <th propValue="DateOfBirth" format="date" class="text-align--center" style="width:100px">Ngày sinh</th>
+                    <th propValue="GenderName" class="text-align--left" style="width:50px">Giới tính</th>
+                    <th propValue="PhoneNumber" class="text-align--left" style="width:100px">Điện thoại</th>
+                    <th propValue="Email" class="text-align--left" style="width:150px">Email</th>
+                    <th propValue="IdentityNumber" class="text-align--left" style="width:150px">Số chứng minh thư</th>
+                    <th propValue="IdentityDate" format="date" class="text-align--left" style="width:150px">Ngày cấp</th>
+                    <th propValue="IdentityPlace" class="text-align--left" style="width:150px">Nơi cấp</th>
+                    <th propValue="DepartmentCode" class="text-align--left">Mã phòng ban</th>
+                    <th propValue="PositionName" class="text-align--left" style="width:200px">Vị trí</th>
+                    <th propValue="DepartmentName" class="text-align--left" style="width:200px">Phòng ban</th>
+                    <th propValue="Salary" format="money" class="text-align--right" style="width:150px">Mức lương cơ bản</th>
+                    <th propValue="WorkStatus" class="text-align--left" style="width:150px">Tình trạng công việc</th>
                 </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
-                <tr>
-                    <td>NV-532408</td>
-                    <td>Hồ Văn Long</td>
-                    <td>Nam</td>
-                    <td>11/08/1978</td>
-                    <td>0940458449</td>
-                    <td>cuon@example.com</td>
-                    <td>Giám đốc</td>
-                    <td>Phòng nhân sự</td>
-                    <td>12.739.391</td>
-                    <td>Đang thử việc</td>
-                </tr>
+             </thead>
+             <tbody>
+
+             </tbody>
             </table>
             <div class="pagination-nocaption">
                 <div class="pagination-nocaption-left">
                    Hiển thị 1-10/1000 nhân viên
                 </div>
-                <div class="pagination">
-                    <a href="#">«</a>
-                    <a  class="active" href="#">1</a>
+                <div id="paging" class="pagination">
+                    <!-- <a id="" class="active" href="#">1</a>
                     <a href="#">2</a>
                     <a href="#">3</a>
                     <a href="#">4</a>
                     <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">»</a>
+                    <a href="#">6</a> -->
                   </div>
                   <div class="pagination-nocaption-right">
                       10 nhân viên/trang
@@ -291,7 +96,7 @@
             <div class="container-frames-add-employee">
             <div class="add-employee-header">
                 <h3>THÔNG TIN NHÂN VIÊN</h3>
-                <img src="../assets/icon/x.svg" alt="X">
+                <img id="btnClose" src="../assets/icon/x.svg" alt="X">
             </div>
             <div class="add-employee-form">
                  <div class="employee-form-left">
@@ -306,28 +111,27 @@
                         <div class="information-container-item">
                             <div class="container-item-one form-group">
                                  <h5>Mã nhân viên</h5>
-                                 <input id="EmployeeCode" name="EmployeeCode" type="text" class="input-text" placeholder="Nhập mã nhân viên">
+                                 <input id="EmployeeCode" name="EmployeeCode" propValue="EmployeeCode" type="text" class="input-text" placeholder="Nhập mã nhân viên">
                                  <p class="form-message"></p>
                             </div>
                             <div class="container-item-two form-group">
                                 <h5>Họ và tên</h5>
-                                <input id="FullName" name="FullName"  type="text" class="input-text" placeholder="Nhập họ và tên">
+                                <input id="FullName" name="FullName" propValue="FullName" type="text" class="input-text" placeholder="Nhập họ và tên">
                                 <p class="form-message"></p>
                            </div>
                         </div>
                         <div class="information-container-item">
                             <div class="container-item-one form-group">
                                  <h5>Ngày sinh</h5>
-                                 <input id="DateOfBirth" name="DateOfBirth" type="date" class="input-text" >
+                                 <input id="DateOfBirth" name="DateOfBirth" propValue="DateOfBirth" type="date" class="input-text" >
                                  <p class="form-message"></p>
                             </div>
                             <div class="container-item-two form-group">
                                 <h5>Giới tính</h5>
-                                <select id="GenderName" name="GenderName" class="input-text">
+                                <select id="GenderName" name="GenderName" propValue="Gender" class="input-text">
                                     <option value="">-- Chọn giới tính --</option>
-                                    <option value="Nam">Nam</option>
-                                    <option value="Nữ">Nữ</option>
-                                    <option value="Khác">Khác</option>
+                                    <option value="0">Nam</option>
+                                    <option value="1">Nữ</option>
                                 </select>
                                 <p class="form-message"></p>
                            </div>
@@ -335,31 +139,31 @@
                         <div class="information-container-item">
                             <div class="container-item-one form-group">
                                  <h5>Số CMTND/Căn cước</h5>
-                                 <input id="IdentityNumber" name="IdentityNumber" type="text" class="input-text" placeholder="Nhập số CMTD/ Căn cước">
+                                 <input id="IdentityNumber" name="IdentityNumber" propValue="IdentityNumber" type="text" class="input-text" placeholder="Nhập số CMTD/ Căn cước">
                                  <p class="form-message"></p>
                                 </div>
                             <div class="container-item-two form-group">
                                 <h5>Ngày cấp</h5>
-                                <input id="IdentityDate" name="IdentityDate" type="date" class="input-text">
+                                <input id="IdentityDate" name="IdentityDate" propValue="IdentityDate" type="date" class="input-text">
                                 <p class="form-message"></p>
                            </div>
                         </div>
                         <div class="information-container-item">
                             <div class="container-item-one form-group">
                                  <h5>Nơi cấp</h5>
-                                 <input id="IssuedBy" name="IssuedBy" type="text" class="input-text" placeholder="Nhập nới cấp">
+                                 <input id="IdentityPlace" name="IdentityPlace" propValue="IdentityPlace" type="text" class="input-text" placeholder="Nhập nới cấp">
                                  <p class="form-message"></p>
                             </div>
                         </div>
                         <div class="information-container-item">
                             <div class="container-item-one form-group">
                                  <h5>Email</h5>
-                                 <input id="Email" name="Email" type="text" class="input-text" placeholder="Nhập email">
+                                 <input id="Email" name="Email" type="text" propValue="Email" class="input-text" placeholder="Nhập email">
                                  <p class="form-message"></p>
                             </div>
                             <div class="container-item-two form-group">
                                 <h5>Số điện thoại</h5>
-                                <input id="PhoneNumber" name="PhoneNumber" type="text" class="input-text" placeholder="Nhập số điện thoại">
+                                <input id="PhoneNumber" name="PhoneNumber" propValue="PhoneNumber" type="text" class="input-text" placeholder="Nhập số điện thoại">
                                 <p class="form-message"></p>
                            </div>
                         </div>
@@ -371,21 +175,21 @@
                         <div class="information-container-item">
                             <div class="container-item-one form-group">
                                  <h5>Vị trí</h5>
-                                 <select id="PositionName" name="PositionName" class="input-text">
+                                 <select id="PositionId" name="PositionId" propValue="PositionId" class="input-text">
                                     <option value="">-- Chọn vị trí --</option>
-                                    <option value="0">Giám đốc</option>
-                                    <option value="1">Trưởng phòng</option>
-                                    <option value="2">Nhân viên</option>
+                                    <option value="5bd71cda-209f-2ade-54d1-35c781481818">Trưởng nhóm</option>
+                                    <option value="30d41e52-5e66-72bc-6c1c-b47866e0b131">Trưởng phòng</option>
+                                    <option value="548dce5f-5f29-4617-725d-e2ec561b0f41">Quản trị hệ thống</option>
                                 </select>
                                 <p class="form-message"></p>
                             </div>
                             <div class="container-item-two form-group">
                                 <h5>Phòng ban</h5>
-                                <select id="DepartmentName" name="DepartmentName" class="input-text">
+                                <select id="DepartmentId" name="DepartmentId" propValue="DepartmentId" class="input-text">
                                     <option value="">-- Chọn phòng ban --</option>
-                                    <option value="0">Phòng nhân sự</option>
-                                    <option value="1">Phòng hành chính</option>
-                                    <option value="2">Phòng nghiên cứu</option>
+                                    <option value="3f8e6896-4c7d-15f5-a018-75d8bd200d7c">Phòng Công Nghệ Thông Tin</option>
+                                    <option value="7c4f14d8-66fb-14ae-198f-6354f958f4c0">Phòng Kế Toán</option>
+                                    <option value="78aafe4a-67a7-2076-3bf3-eb0223d0a4f7">Phòng Nhân Sự</option>
                                 </select>
                                 <p class="form-message"></p>
                            </div>
@@ -393,19 +197,19 @@
                         <div class="information-container-item">
                             <div class="container-item-one form-group" >
                                  <h5>Mã số thuế cá nhân</h5>
-                                 <input id="PersonalCode" name="PersonalCode" type="text" class="input-text" placeholder="Nhập mã số thuế cá nhân">
+                                 <input id="PersonalTaxCode" name="PersonalTaxCode" propValue="PersonalTaxCode" type="text" class="input-text" placeholder="Nhập mã số thuế cá nhân">
                                  <p class="form-message"></p>
                             </div>
                             <div class="container-item-two form-group">
                                 <h5>Mức lương cơ bản</h5>
-                                <input id="BasicSalary" name="BasicSalary" type="text" class="input-text" placeholder="Nhập mức lương cơ bản">
+                                <input id="Salary" name="Salary" propValue="Salary" type="text" class="input-text" placeholder="Nhập mức lương cơ bản">
                                 <p class="form-message"></p>
                            </div>
                         </div>
                         <div class="information-container-item">
                             <div class="container-item-one form-group">
                                  <h5>Ngày gia nhập công ty</h5>
-                                 <input id="JoinDate" name="JoinDate" type="date" class="input-text">
+                                 <input id="JoinDate" name="JoinDate" propValue="JoinDate" type="date" class="input-text">
                                  <p class="form-message"></p>
                             </div>
                             <div class="container-item-two form-group">
@@ -426,14 +230,17 @@
             <div class="add-employee-footer">
                 <div class="container-footer">
                     <a href="#">Hủy</a>
-                    <button type="submit" id="create" class="m-button m-button-icon">Lưu</button>
+                    <button type="submit" id="btnSave" class="m-button m-button-icon">Lưu</button>
                 </div>
             </div>
         </form>
 
     </div>
      <!-- Nhúng các thư viện -->
+
     <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/moment.js"></script>
+
     <!-- Nhúng các js dùng chung -->
     
     <!-- Nhúng các js sử dụng riêng -->
@@ -467,42 +274,42 @@
                 // Giới tính
                 Validator.isRequired('#GenderName'),
 
-                // CMND or CCCD
-                Validator.isRequired('#IdentityNumber'),
-                Validator.isCmndMinLength('#IdentityNumber',9,12),
+                // // CMND or CCCD
+                // Validator.isRequired('#IdentityNumber'),
+                // Validator.isCmndMinLength('#IdentityNumber',9,12),
 
-                // Ngày cấp
-                Validator.isRequired('#IdentityDate'),
-                Validator.isDatevalid('#IdentityDate'),
+                // // Ngày cấp
+                // Validator.isRequired('#IdentityDate'),
+                // Validator.isDatevalid('#IdentityDate'),
 
-                // Nơi cấp
-                Validator.isRequired('#IssuedBy'),
+                // // Nơi cấp
+                // Validator.isRequired('#IdentityPlace'),
 
-                // Email
-                Validator.isRequired('#Email'),
-                Validator.isEmail('#Email'),
+                // // Email
+                // Validator.isRequired('#Email'),
+                // Validator.isEmail('#Email'),
 
-                // Số điện thoại
-                Validator.isRequired('#PhoneNumber'),
+                // // Số điện thoại
+                // Validator.isRequired('#PhoneNumber'),
 
-                // Vị trí
-                Validator.isRequired('#PositionName'),
+                // // Vị trí
+                // Validator.isRequired('#PositionName'),
 
-                // Phòng ban
-                Validator.isRequired('#DepartmentName'),
+                // // Phòng ban
+                // Validator.isRequired('#DepartmentName'),
 
-                // Mã số thuế cá nhân
-                Validator.isRequired('#PersonalCode'),
+                // // Mã số thuế cá nhân
+                // Validator.isRequired('#PersonalCode'),
 
-                // Mức lương cơ bản
-                Validator.isRequired('#BasicSalary'),
+                // // Mức lương cơ bản
+                // Validator.isRequired('#BasicSalary'),
                 
-                // Ngày gia nhập công ty
-                Validator.isRequired('#JoinDate'),
-                Validator.isDatevalid('#JoinDate'),
+                // // Ngày gia nhập công ty
+                // Validator.isRequired('#JoinDate'),
+                // Validator.isDatevalid('#JoinDate'),
 
-                // Tình trạng công việc
-                Validator.isRequired('#WorkStatus'),
+                // // Tình trạng công việc
+                // Validator.isRequired('#WorkStatus'),
             ],
             onSubmit: function(data){
                 //call API

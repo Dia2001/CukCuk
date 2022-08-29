@@ -54,11 +54,16 @@
 .select-location{
     margin-left: 15px;
 }
+.reload{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
 .button-reload{
     background-image: url(../../assets/icon/refresh.png);
     background-repeat: no-repeat;
     width: 40px;
-    height: 29px;
+    height: 40px;
     text-align: left;
     background-position-x: 8px;
     background-position-y: center;
@@ -90,7 +95,7 @@
 .pagination{
     margin-left: auto;
     margin-right: auto;
-    width:350px;
+    width:200px;
 }
 .pagination a {
     color: black;
@@ -238,4 +243,22 @@ h5{
 .employee-form-left>p{
     font-size: 12px;
     margin-left: 12px;
+}
+/* 
+----------------------------------------------------------
+    Các hiệu ứng crete update delete
+*/
+tbody tr.row-selected {
+    background-color: aquamarine;
+}
+#btnDelete {
+    border-radius: 4px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #bbbbbb;
+    background-image: url(../../assets/icon/delete.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px 20px;
+    cursor: pointer;
 }
